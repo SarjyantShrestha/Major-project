@@ -11,35 +11,19 @@
 \usepackage{float}
 \usepackage{array}
 \usepackage{caption}
-\usepackage{multirow}
+\usepackage{multirow} 
 \usepackage[table]{xcolor}
 \usepackage{fix-cm}
 \usepackage{ragged2e}
+% \usepackage[utf8]{inputenc}
+% \usepackage{fontspec} % For custom fonts
+% \setmainfont{Noto Serif} % Use a font that supports Devanagari script
+% \usepackage[utf8]{inputenc} % For Unicode input
+% \usepackage[english]{babel} % For language settings
 
-% custom command for chapter headings
-\titleformat{\chapter}[display]
-  {\rmfamily\bfseries\fontsize{16}{18}\selectfont}{\chaptertitlename\ \thechapter}{20pt}{\fontsize{16}{18}\selectfont\bfseries}
-
-% setting for section headings
-\titleformat{\section}[block]
-  {\rmfamily\bfseries\fontsize{14}{16}\selectfont}{\thesection}{1em}{}
-
-% setting for subsection headings
-\titleformat{\subsection}[block]
-  {\rmfamily\bfseries\fontsize{13}{14}\selectfont}{\thesubsection}{1em}{}
-
-% setting for subsubsection headings
-\titleformat{\subsubsection}[block]
-  {\rmfamily\bfseries\fontsize{12}{12}\selectfont}{\thesubsubsection}{1em}{}
-
-
-
-% adjusting spacing before and after paragraphs
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
-
-% adjusting line spacing
-\onehalfspacing
+% \newcommand{\subsubsubsec}[1]{\paragraph{#1}\mbox{}\\}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 \begin{document}
 
