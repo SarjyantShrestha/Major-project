@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{sanskrit}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily{\devanagarifont}[Script=Devanagari]{Noto Serif Devanagari}
+
+\begin{document}
+
+\section{english}
+this is some english text.
+
+\section{nepali}
+\begin{sanskrit}
+  तुप्पी केरा हो!
+\end{sanskrit}
+this is another english
+
+\end{document}
+
