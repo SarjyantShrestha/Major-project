@@ -7,6 +7,7 @@
 *.lof
 *.lot
 *.toc
+*.xdv
 *.log
 *.fls
 *.fdb_latexmk
