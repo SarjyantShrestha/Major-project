@@ -14,21 +14,49 @@
        \subsection{Data Collection}
        Datas of Nepali Text will be collected from different nepali news and governmental websites for training.
        
-       \subsection{Data Preprocessing}
-       \subsubsection{Normalization}
-       In English, we have uppercase and lowercase letters that sound the same when we speak them. Similarly, in Nepali, there are different ways to write certain vowel sounds that sound the same when spoken. For example, the words 
-    %    नेपाली and नेपालि     
-        are pronounced the same way, but they are written differently. This can cause confusion and mistakes in written Nepali, making the data messy. Normalization is the process of finding these differences and making sure they are all written in the same way to clean up the data.
+    %    \subsection{Data Preprocessing}
+    %    \subsubsection{Normalization}
+    %    In English, we have uppercase and lowercase letters that sound the same when we speak them. Similarly, in Nepali, there are different ways to write certain vowel sounds that sound the same when spoken. For example, the words 
+    % %    नेपाली and नेपालि     
+    %     are pronounced the same way, but they are written differently. This can cause confusion and mistakes in written Nepali, making the data messy. Normalization is the process of finding these differences and making sure they are all written in the same way to clean up the data.
 
 
+        \subsection*{BERT}
+        BERT stands for Bidirectional Encoder Representations from Transformers. It is designed to train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context.
+        % As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of NLP tasks.
        
         \newpage
-        % \justifying
+        % \justifying 
         \subsection{Gantt Chart}
-            \begin{figure}[hbt!]
-                \center{
-                    \includegraphics[width=1\textwidth]{./img/GANT_CHART.jpg}
-                }
-                \caption{Gantt chart}
-            \end{figure}
-
+        \vspace{2em}
+        \begin{figure}[htbp]
+            \hspace*{-1cm} % Adjust the value as needed
+            \begin{ganttchart}[
+                hgrid,
+                vgrid,
+                x unit=2em,
+                y unit chart=3em,
+                time slot format=isodate-yearmonth,
+                time slot unit=month,
+                title height=1,
+                bar/.append style={fill=blue!40},
+                bar height=0.7,
+                bar label node/.append style={align=right, text width=7em},
+                group height=0.6,
+                group peaks height=0.2,
+                group peaks tip position=0,
+                group/.append style={draw=black, fill=green!50},
+                group label font=\small
+                ]{2024-04}{2025-03}
+                \gantttitlecalendar{year} \\
+                \gantttitlecalendar{month} \\
+                \ganttbar{Requirement Analysis}{2024-04}{2024-05} \\
+                \ganttbar{Feasibility Study}{2024-04}{2024-05} \\
+                \ganttbar{Software Design}{2024-05}{2024-06} \\
+                \ganttbar{Implementation}{2024-06}{2025-01} \\
+                \ganttbar{Testing}{2025-01}{2025-02} \\
+                \ganttbar{Research}{2024-04}{2025-01}\\
+                \ganttbar{Documentation}{2024-04}{2025-03}\\
+            \end{ganttchart}
+            \caption{Gantt Chart}
+        \end{figure}
