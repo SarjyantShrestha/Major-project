@@ -2,31 +2,47 @@
         \section{SOFTWARE REQUIREMENT}
             This project requires following softwares:
             \subsection*{Python} 
-            Python is our primary language for this project, chosen for its versatility and simplicity. All machine learning frameworks are imported using
-            Python, leveraging its dominant position in data science and machine learning. This allows us to seamlessly integrate powerful libraries like TensorFlow and PyTorch for efficient model development.
+            Python is our primary language for this project, chosen for its versatility and simplicity. All machine learning frameworks are imported using Python, leveraging its dominant position in data science and machine learning. This allows us to seamlessly integrate powerful libraries like TensorFlow and PyTorch for efficient model development. It also provides essential libraries like Scikit-learn, Numpy, Pandas, etc.
         
             \subsection*{Pytorch}
             Pytorch is a an open-source machine learning framework. It provides a flexible and dynamic computational graph, which allows for easy experimentation and rapid development of deep learning models. 
-                
+
+            \subsection*{Natural Language Toolkit}
+            Natural Language Toolkit (NLTK) is a free and open source Python library for natural language processing. NLTK provides stemming, lowercase, categorization, tokenization, spell check, lemmatization, and semantic reasoning text processing packages. It gives access to lexical resources like WordNet.
+
+        \newpage        
         \section{FUNCTIONAL REQUIREMENT}
             These are specifications that describe the fundamental capabilities and behaviors a system or product must exhibit to meet the users' needs and achieve its intended purpose. 
 
-            \subsection{Dataset Labeler}
-                Dataset labeler is the labelling system that is used to annotate the images as “Real”, or “Fake”.
+            \subsection{Tokenization}
+            The system should be able to tokenize Nepali text into individual words or subword units, considering the complexities of the Nepali script.
 
-            \subsection{User-Friendly Dashboard}
-                A user-friendly dashboard that allows user to monitor and manage the deepfake detection process.
+            \subsection{Embedding Generation}
+            Generate dense vector representations (embeddings) for each word or subword unit in the Nepali vocabulary. These embeddings should capture semantic relationships between words.
+
+            \subsection{Embedding Lookup}
+            Allow users to retrieve the embedding vector for any given word or subword unit in the Nepali vocabulary.
+
+            \subsection{Similarity Calculation}
+            Calculate semantic similarity between words or subword units based on their embedding vectors. Users should be able to compare words and get similarity scores.
 
         \section{NON-FUNCTIONAL REQUIREMENT}
-            These are the characteristics and qualities that describe how a system should behave and perform,
+            These are the characteristics and qualities that describe how a system should behave and perform.
+
+            \subsection{Usability}            
+            The system should have a user-friendly interface or API that allows users to easily interact with word embeddings without requiring deep technical knowledge.
 
             \subsection{Reliability}
-                The system aims for high reliability, ensuring accurate predictions with a confidence level of 97 percent.
-            \subsection{Maintainability}
-                The model is designed with maintainability in mind, allowing for easy updates and further training. This ensures adaptability to evolving datasets and changing input patterns, contributing to sustained efficiency and relevance over time.
-            \subsection{Portability}
-                The use of standardized and widely supported libraries ensures that the model can seamlessly run on various operating systems and integrate with diverse hardware configurations.
-            
+            The system aims to be highly available, with minimal downtime, to ensure users can access word embedding functionalities when needed.
+
+            \subsection{Interoperability}
+            The system ensures compatibility with various operating systems, programming languages, and NLP frameworks to facilitate integration with existing systems and workflows.
+
+            \subsection{Maintainability}            
+            The system with a modular architecture will enable easy maintenance, updates, and future enhancements.
+
+
+        \newpage        
         \section{FEASIBILITY STUDY}
             The following points describes the feasibility of the project.
 
@@ -34,9 +50,7 @@
                 The total expenditure of the project is just computational power. The computational resources can be fulfilled with the help of college. Therefore, the project is economically feasible.
 
             \subsection{Technical Feasibility}
-                Large number of already labelled datasets are easily available on the internet which is the most crucial requirement for this project. And with all the resources we have access to, this project is technically feasible.
+                While existing datasets on this topic are available, they are insufficient. But, by using the abundance of Nepali news articles, books, and literature accessible online can augment our corpus significantly through web scraping.
 
             \subsection{Operational Feasibility}
-                The operational processes, including data labeling and model training, are well-defined and can be efficiently carried out by the project team. Additionally, the project aligns with the existing technical infrastructure and capabilities, making it operationally feasible.
-
-            
+                The operational processes, including web-scraping and model training, are well-defined and can be efficiently carried out by the project team. Additionally, the project aligns with the existing technical infrastructure and capabilities, making it operationally feasible.
