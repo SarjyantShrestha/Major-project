@@ -3,33 +3,35 @@
 \usepackage[left=1.2in,right=1in,top=1in,bottom=1in,headheight=6pt, a4paper]{geometry} % Adjusted top margin
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{caption}
 \usepackage{subcaption}
-\usepackage{multirow}
 \usepackage{amsmath,amssymb,amsfonts,bbm}
-% \usepackage[hidelinks]{hyperref}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
 \usepackage{cite}
 \usepackage{url} 
-\usepackage{caption}
 \usepackage{enumitem}
 \usepackage{svg}
+\usepackage{ragged2e}
+\usepackage{titlesec}
 \usepackage{float}
-\usepackage{enumitem}
-\usepackage{booktabs}
 \usepackage{placeins}
-\usepackage{pgfgantt}
-\usepackage[export]{adjustbox}
-\usepackage{inputenc}
-\usepackage{multicol}
-\usepackage[pagestyles]{titlesec}
-\usepackage{polyglossia}
+\usepackage{booktabs}
+\usepackage{longtable}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
-
+\usepackage{lipsum}
+\usepackage[export]{adjustbox}
+\usepackage{polyglossia}
 \setdefaultlanguage{english}
 \setotherlanguage{sanskrit}
+\usepackage{pgfgantt}
+
 
 \usepackage{fontspec}
 \newfontfamily{\devanagarifont}[Script=Devanagari, Path=./]{NotoSerifDevanagari-VariableFont_wdth,wght.ttf}
+
 
 %\titleformat{\subsubsubsection}[runin]{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
 %\titlespacing*{\subsubsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
@@ -47,43 +49,25 @@
   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
   \renewcommand{\baselinestretch}{1.5}
 
-
-% \setlist[enumerate]{itemsep=0mm}
-% % \DeclareUnicodeCharacter{202F}{\,} 
-% \newcommand\tab[1][1cm]{\hspace*{#1}} 
-% \setcounter{secnumdepth}{4}
-\titleformat
-{\chapter} %command
-[display]   %shape
-{\Huge \bfseries} %format
-{Chapter \thechapter} % chapter no format
-{1ex} % separation between chapter 1 and introduction
-{}
-[
-    \vspace{0ex}
-]
-\titlespacing*{\chapter}{0ex}{-2ex}{4ex}
-% \newcommand{\subsubsubsec}[1]{\paragraph{#1}\mbox{}\\}
-% \setcounter{secnumdepth}{3}
-% \setcounter{tocdepth}{3}
-% % adjusting spacing before and after paragraphs
-% \setlength{\parskip}{6pt}
-% % adjusting line spacing
-% \onehalfspacing
-
-
 \begin{document}
-  \include{title}
-  \pagenumbering{roman}
-  \include{chapter/abstract}
-  \include{chapter/chapter_1}
-  \include{chapter/chapter_2}
-  \include{chapter/chapter_3}
-  % \include{chapter/chapter_4}
-  \include{chapter/chapter_5}
-  \include{chapter/chapter_6}
-  % \include{chapter/chapter_7}
-  \newpage
-  \bibliographystyle{unsrt}
-  \bibliography{references}
+    \noindent
+    \include{title}
+    \include{intro}
+    \include{chapter/chapter_1}
+    \include{chapter/chapter_2}
+    \include{chapter/TheoriticalBaackground}
+    \include{chapter/Methodology}
+    \include{chapter/System_Design}
+     \include{chapter/Implementation_Plan}
+    \include{chapter/expected_outcome}
+   
+    %\printbibliography[title={References}] % Print bibliography with the title "References"
+    %\bibliographystyle{IEEEtran}
+    %\bibliography{ref}
+    %\addcontentsline{toc}{section}{Bibliography}
+    \newpage
+      \renewcommand{\bibname}{REFERENCES}
+      \bibliographystyle{unsrt}
+       \bibliography{ref} % Replace "ref" with your bibliography file name
+       \addcontentsline{toc}{chapter}{REFERENCES}
 \end{document}
